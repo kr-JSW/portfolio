@@ -31,7 +31,7 @@ function Home() {
                             <p>
                                 안녕하세요.
                                 <br />
-                                몰입을 추구하는 개발자 <strong>정승원</strong> 입니다.
+                                몰입을 추구하는 개발자 <strong>OOO</strong> 입니다.
                                 <br />
                             </p>
                             <p>
