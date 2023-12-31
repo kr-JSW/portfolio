@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "grandmother";
+    src: url("../../public/fonts/grandmother.ttf");
+}
+
+.global{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:rgb(243 244 246 );
+    height: 100%;
+    width: 100%; 
+    
+}
+
+@keyframes btn_Letter_space{
+    0%{
+        letter-spacing: 0px;
+    }
+    50%{
+        letter-spacing: 5px;
+    }
+    100%{
+        letter-spacing: 0px;
+    }
+}
+
+.btn_animation:hover{
+    animation-duration: 1s;
+    animation-name: btn_Letter_space;
+    animation-iteration-count: infinite;
+}
+
+@keyframes skillRound{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 0.8;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.roundScale{
+    animation-duration: 3s;
+    animation-name: skillRound;
+    animation-iteration-count: infinite;
+}
+
+.skillListAnimation{
+     animation: skillList 1s linear;
+    animation-delay: calc(0.9s*var(--i)); 
+    
+}
+
+@keyframes skillList {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.pageLoadingAnimation{
+    animation: pageLoading 4s infinite linear;
+}
+
+
+@keyframes pageLoading {
+    0%{
+        filter: hue-rotate(0deg);
+     
+    }
+    100%{
+        filter: hue-rotate(360deg);
+       
+    }
+}

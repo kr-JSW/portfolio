@@ -1,113 +1,83 @@
-import Image from 'next/image'
+'use client';
+import React from 'react';
+import Lottie from 'lottie-react';
+import PCanimation from '../../public/Animation.json';
+import { useRouter } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+function Home() {
+    const router = useRouter();
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    return (
+        <section className="min-h-screen w-[100%] relative">
+            <div className="w-[80%] h-[500px]  absolute top-[50%]  translate-y-[-50%] left-[50%] translate-x-[-50%]  flex items-center">
+                <div className=" flex-[40%] min-w-[300px]  hidden md:block">
+                    <Lottie animationData={PCanimation} />
+                </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+                <div className=" flex-[60%] h-[80%] flex flex-col items-center ">
+                    <div className="flex-1 min-w-[250px] w-[100%] px-[10%] flex flex-col justify-center items-start text-[30px] md:text-[50px] font-mono hover:tracking-[3px] transition-all duration-500 ease-out">
+                        Think More
+                        <strong className="min-w-[250px] w-[100%] flex justify-end text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-red-300 to-indigo-300 ">
+                            Dive Deeper
+                        </strong>
+                    </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+                    <div className=" flex-[1] w-[50%]  max-w-[400px]  md:hidden">
+                        <Lottie animationData={PCanimation} />
+                    </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+                    <div className="flex-[1] flex flex-col justify-center items-center pb-[50px] w-[100%] px-[50px] font-[grandmother] text-[20px] md:text-[30px]">
+                        <div>
+                            <p>
+                                안녕하세요.
+                                <br />
+                                몰입을 추구하는 개발자 <strong>정승원</strong> 입니다.
+                                <br />
+                            </p>
+                            <p>
+                                풀리지 않는 문제가 있으면, <br /> 개인 시간에 몰두 하여 해결하는 성향을 가지고 있습니다.
+                            </p>
+                        </div>
+                    </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+                    <div className="flex-[1] flex-row gap-[10px] w-[100%] items-center justify-evenly hidden md:flex">
+                        <button
+                            onClick={() => router.push('/projects')}
+                            className=" w-[27%] h-[60px] relative group transition-all duration-1000 ease-out rounded-[10px] border border-blue-300 bg-blue-300 hover:text-blue-300 text-white overflow-hidden z-[50]"
+                        >
+                            <span
+                                className="absolute rounded-[50%] bg-white w-[50px] h-[50px] top-[50px] left-[-50px]
+                             group-hover:top-[-25px] group-hover:left-[50px] transition-all duration-1000 ease-out group-hover:scale-[500%] z-[-1]"
+                            ></span>
+                            Projects
+                        </button>
+
+                        <button
+                            onClick={() => router.push('/stack')}
+                            className=" w-[27%] h-[60px] relative group transition-all duration-1000 ease-out rounded-[10px] border border-blue-300 bg-blue-300 hover:text-blue-300 text-white overflow-hidden z-[50]"
+                        >
+                            <span
+                                className="absolute rounded-[50%] bg-white w-[50px] h-[50px] top-[50px] left-[-50px]
+                             group-hover:top-[-25px] group-hover:left-[50px] transition-all duration-1000 ease-out group-hover:scale-[500%] z-[-1]"
+                            ></span>
+                            Skills
+                        </button>
+
+                        <button
+                            onClick={() => router.push('/contact-me')}
+                            className=" w-[27%] h-[60px] relative group transition-all duration-1000 ease-out rounded-[10px] border border-blue-300 bg-blue-300 hover:text-blue-300 text-white overflow-hidden z-[50]"
+                        >
+                            <span
+                                className="absolute rounded-[50%] bg-white w-[50px] h-[50px] top-[50px] left-[-50px]
+                             group-hover:top-[-25px] group-hover:left-[50px] transition-all duration-1000 ease-out group-hover:scale-[500%] z-[-1]"
+                            ></span>
+                            Contact
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }
+
+export default Home;
