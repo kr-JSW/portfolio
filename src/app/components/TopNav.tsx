@@ -16,7 +16,7 @@ const TopNav = () => {
         <section className="w-full h-[80px] bg-transparent flex justify-between items-center px-[20px] fixed z-[50] md:px-[100px]">
             <div className="hidden md:flex justify-between items-center w-full">
                 <Link href="/" className=" font-semibold text-[25px] ">
-                    Won's{' '}
+                    Won&apos;s&nbsp;
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-500">
                         Space
                     </span>
@@ -37,7 +37,7 @@ const TopNav = () => {
                     }
 
                     <Link href="/" className=" font-semibold text-[20px] ">
-                        Won's{' '}
+                        Won&apos;s&nbsp;
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-500">
                             Space
                         </span>

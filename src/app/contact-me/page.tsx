@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { backgroundImgs } from '../constants';
 
-const page = () => {
+const Page = () => {
     const form = useRef<HTMLFormElement>(null);
 
     const [textSec, setTextSec] = useState('');
@@ -97,4 +97,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;
