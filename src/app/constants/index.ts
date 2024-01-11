@@ -62,6 +62,32 @@ export const projects = [
             Deploy: 'vercel',
         },
     },
+    {
+        name: '비우는 시간',
+        src: '/img/meditationTimer.jpg',
+        demo: 'https://serenitytimer.vercel.app/',
+        readme: 'https://github.com/kr-JSW/meditationTimer?tab=readme-ov-file',
+        des: '비우는 시간은 명상을 수행자들을 위한 타이머 입니다. 기존의 명상 타이머 사이트들에 초시계 소리 기능이 없어 추가하였습니다.',
+        skills: {
+            FE: 'NextJs, Tailwind CSS, Javascript',
+            BE: 'no',
+            DB: 'no',
+            Deploy: 'vercel',
+        },
+    },
+    {
+        name: "Won's Space",
+        src: '/img/portfolio.jpg',
+        demo: 'no',
+        readme: 'https://github.com/kr-JSW/portfolio',
+        des: '취업을 위한 포트폴리오 입니다. 기존의 작업물들을 모았습니다.',
+        skills: {
+            FE: 'NextJs, Tailwind CSS, Typescript',
+            BE: 'no',
+            DB: 'no',
+            Deploy: 'vercel',
+        },
+    },
 ];
 
 export const stackImg = {
